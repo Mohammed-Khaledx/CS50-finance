@@ -1,0 +1,30 @@
+{% extends "layout.html" %} {% block title %} Quoted {% endblock %} {% block
+main %}
+
+<div class="row">
+<form action="/sell" method="post">
+  <select name = "value"
+    class="col-4 mb-4 form-select"
+    id="floatingSelect"
+    aria-label="Floating label select example"
+  >
+    <option selected>Open this select menu</option>
+    {% for symbol in symbols %}
+    <option  value ={{symbol.symbol}}>{{symbol.symbol}}</option>
+    {%endfor%}
+  </select>
+
+  <!-- <label for="floatingSelect">Symbols</label> -->
+  <input
+    class="col-4 form-control mx-auto w-auto"
+    id="shares"
+    name="shares"
+    placeholder="number of shares"
+    type="number"
+  />
+  <button class="btn btn-primary" type="submit">Sell</button>
+  
+</form>
+</div>
+
+{% endblock %}

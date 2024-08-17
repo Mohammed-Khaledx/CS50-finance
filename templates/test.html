@@ -1,0 +1,28 @@
+<table>
+  <thead>
+    <tr>
+      <th>User ID</th>
+      <th>Symbol</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Share</th>
+      <th>Total</th>
+      <th>Time</th>
+      <th>New Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in data %}
+    <tr>
+      <td>{ {item.user_id}}</td>
+      <td>{ {item.symbol}}</td>
+      <td>{ {item.name}}</td>
+      <td>{ {item.price}}</td>
+      <td>{ {item.share}}</td>
+      <td>{ {item.total}}</td>
+      <td>{ {item.time}}</td>
+      <td>{ {item.new_price[0]}} x { {item.new_price1}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

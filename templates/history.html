@@ -1,0 +1,30 @@
+{% extends "layout.html" %} {% block title %} Quoted {% endblock %} {% block
+main %}
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Symbol</th>
+      <th scope="col">Shares</th>
+      <th scope="col">Price</th>
+      <!-- total = price * shares -->
+      <th scope="col">date and time </th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for transaction in history %}
+    <tr>
+      <td>{{transaction.symbol}}</td>
+      <td>{{transaction.shares}}</td>
+      <!-- the price here will pe the new price and this may differ from the process price -->
+      <!-- FIXME -->
+      <td>{{ transaction.price }}</td>
+      <!-- new price * shares -->
+      <td>{{ transaction.date}}</td>
+      <!-- the price here will pe the new price and this may differ from the process price -->
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

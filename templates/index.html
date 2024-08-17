@@ -1,0 +1,44 @@
+{% extends "layout.html" %} {% block title %} Quoted {% endblock %} {% block
+main %}
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Symbol</th>
+      <th scope="col">Name</th>
+      <th scope="col">Shares</th>
+
+      <th scope="col">Price</th>
+      <!-- total = price * shares -->
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for process in processes %}
+    <tr>
+      <td>{{process.symbol}}</td>
+      <td>{{process.name}}</td>
+      <td>{{process.share}}</td>
+      <!-- the price here will pe the new price and this may differ from the process price -->
+      <!-- TODO fix new price -->
+
+      <td>${{ process.new_price[0] }}</td>
+      <!-- new price * shares -->
+      <td>${{ process.new_price[0] * process.new_price[1] }}</td>
+
+      <!-- the price here will pe the new price and this may differ from the process price -->
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<div class="row justify-content-end">
+  <h4 class="col-md-3">Cash</h4>
+  <h4 class="col-md-3">{{cash}}</h4>
+</div>
+<div class="row justify-content-end">
+  <h4 class="col-md-3">Total</h4>
+  
+  <h4 class="col-md-3">{{Total  }}</h4>
+</div>
+{% endblock %}
