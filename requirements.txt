@@ -1,3 +1,11 @@
+# cs50
+# Flask
+# Flask-Session
+# requests
+# yfinance
+# pytz
+# Werkzeug
+# _____________________________
 blinker==1.6.2
 cachelib==0.10.2
 certifi==2023.7.22
@@ -20,3 +28,4 @@ termcolor==2.3.0
 typing_extensions==4.7.1
 urllib3==2.0.4
 Werkzeug==2.3.7
+yfinance
