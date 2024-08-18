@@ -5,6 +5,22 @@ requests
 yfinance
 pytz
 Werkzeug
+blinker
+cachelib
+certifi
+charset-normalizer
+click
+Flask-SQLAlchemy
+greenlet
+idna
+itsdangerous
+Jinja2
+MarkupSafe
+SQLAlchemy
+sqlparse
+termcolor
+typing_extensions
+urllib3
 # _____________________________
 # blinker==1.6.2
 # cachelib==0.10.2
